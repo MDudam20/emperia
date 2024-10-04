@@ -4859,7 +4859,7 @@ START: Theme Interactive Image CSS
     display: block;
     position: relative;
     z-index: 1;
-    max-height: 700px;
+    /* max-height: 700px; */
 }
 
 .tj_interactive_image .tj_interactive_image_media {
@@ -5010,7 +5010,7 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
 }
 
 .tj_interactive_image .tj_interactive_image_content {
-    background-color: var(--tj-color-theme-bg-dark-light);
+    background-color: var(--tj-color-theme-primary);
     position: absolute;
     left: 15%;
     top: 50%;
@@ -5119,6 +5119,9 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
     transition: 350ms ease all;
     width: 95%;
 }
+.tj_interactive_image .tj_interactive_image_content ul {
+    list-style-type: square;
+}
 
 @media (max-width: 575px),
 (max-width: 767px),
@@ -5131,7 +5134,10 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 .tj_interactive_image .tj_interactive_image_content .tj_interactive_image_item.on .tj_interactive_image_item_title,
 .tj_interactive_image .tj_interactive_image_content .tj_interactive_image_item.on .tj_interactive_image_item_number {
-    color: var(--tj-color-theme-primary);
+    /* color: var(--tj-color-theme-primary); */
+    color: var(--tj-color-common-black);
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .tj_interactive_image .tj_interactive_image_content .tj_interactive_image_item.on .tj_interactive_image_item_title::after {
