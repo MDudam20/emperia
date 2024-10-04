@@ -7668,3 +7668,6 @@ START: Theme Scroll CSS
  .footer-thumb img{
     width: 80%;
  }
+ .project-section .section-heading h2{
+    color: var(--tj-color-common-black);
+ }
