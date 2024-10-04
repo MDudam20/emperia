@@ -3070,8 +3070,8 @@ START: Theme Plan CSS
     font-weight: 500;
     line-height: 1;
     margin-bottom: 0;
-    /* color: var(--tj-color-theme-bg-dark); */
-    color: var(--tj-color-common-white);
+    color: var(--tj-color-theme-bg-dark);
+    /* color: var(--tj-color-common-white); */
 }
 
 .plan-content .pdf-box {
@@ -3079,6 +3079,11 @@ START: Theme Plan CSS
     -webkit-column-gap: 10px;
     -moz-column-gap: 10px;
     column-gap: 10px;
+    column-gap: 10px;
+    border: 1px solid;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 @media (max-width: 991px) {
@@ -3125,8 +3130,10 @@ START: Theme Plan CSS
 .plan-tab .nav-tabs .nav-link {
     background-color: transparent;
     border: 1px solid transparent;
-    color: var(--tj-color-common-white);
+    /* color: var(--tj-color-common-white); */
+    color:var(--tj-color-theme-bg-dark-deep);
     font-size: 18px;
+    font-weight: 600;
 }
 
 .plan-tab .nav-tabs .nav-link:hover {
@@ -4242,6 +4249,8 @@ START: Theme Project CSS
     transform: scale(1);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 300px;
 }
 
 .project-item .project-content {
@@ -7629,6 +7638,9 @@ START: Theme Scroll CSS
     /* padding: 11px; */
     background-color: #fff;
   }
+  .modal-info{
+    background-color: #9a560d !important;
+  }
  .bg-yellow-light{
     background: #E3B574;
  }  
@@ -7639,5 +7651,12 @@ START: Theme Scroll CSS
     color: var(--tj-color-common-black);
  }
  .plan-section p{
-    color: var(--tj-color-common-white);
+    /* color: var(--tj-color-common-white); */
+    color: var(--tj-color-common-black);
+ }
+ .plan-section .section-title{
+    color: var(--tj-color-common-black);
+ }
+ .plan-content .pdf-box .pdf-content h3{
+    color: var(--tj-color-common-black);
  }
