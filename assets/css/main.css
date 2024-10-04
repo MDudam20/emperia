@@ -2891,8 +2891,12 @@ START: Theme Counter CSS
 
 .counter-item {
     position: relative;
+    margin: 35px 10px;
 }
-
+.a{
+    font-size: 20px;
+    color: var(--tj-color-common-black);
+}
 @media (max-width: 991px) {
     .counter-item {
         margin-bottom: 20px;
@@ -2904,8 +2908,9 @@ START: Theme Counter CSS
     color: var(--tj-color-theme-primary);
     font-size: 80px;
     font-weight: 400;
-    margin-bottom: 0;
     opacity: 0.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2934,7 +2939,7 @@ START: Theme Counter CSS
 .counter-item .counter-content {
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: o;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -2943,8 +2948,8 @@ START: Theme Counter CSS
 
 .counter-item .counter-content .counter-text {
     font-family: var(--tj-ff-body);
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 5px;
     line-height: 1;
