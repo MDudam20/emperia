@@ -1,6 +1,10 @@
 @font-face {
     font-family: "flaticon_beauly";
-    src: url("../fonts/flaticon_beauly.ttf?6ff65d437eb2487061a5eb47f56a69d9") format("truetype"), url("../fonts/flaticon_beauly.woff?6ff65d437eb2487061a5eb47f56a69d9") format("woff"), url("../fonts/flaticon_beauly.woff2?6ff65d437eb2487061a5eb47f56a69d9") format("woff2"), url("../fonts./flaticon_beauly.eot?6ff65d437eb2487061a5eb47f56a69d9#iefix") format("embedded-opentype"), url("../fonts/flaticon_beauly.svg?6ff65d437eb2487061a5eb47f56a69d9#flaticon_beauly") format("svg");
+    src: url("../fonts/flaticon_beauly.ttf") format("truetype"), url("../fonts/flaticon_beauly.woff?6ff65d437eb2487061a5eb47f56a69d9") format("woff"), url("../fonts/flaticon_beauly.woff2?6ff65d437eb2487061a5eb47f56a69d9") format("woff2"), url("../fonts./flaticon_beauly.eot?6ff65d437eb2487061a5eb47f56a69d9#iefix") format("embedded-opentype"), url("../fonts/flaticon_beauly.svg?6ff65d437eb2487061a5eb47f56a69d9#flaticon_beauly") format("svg");
+}
+@font-face {
+    font-family: "flaticon_beauly";
+    src: url("../amenities_fonts/icomoon.ttf") format("truetype"), url("../amenities_fonts/icomoon.woff") format("woff");
 }
 
 i[class^="flaticon-"]:before,
@@ -13,6 +17,34 @@ i[class*=" flaticon-"]:before {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-salon:before {
+    content: "\e910";
+}
+.flaticon-working:before {
+    content: "\e90d";
+}
+.flaticon-lounge:before {
+    content: "\e90e";
+}
+.flaticon-gymnasium:before {
+    content: "\e90f";
+}
+.flaticon-lawn:before {
+    content: "\e912";
+}
+.flaticon-indoor-sports-area:before {
+    content: "\e911";
+}
+.flaticon-audio-visual-room:before {
+    content: "\e900";
+}
+.flaticon-outdoor-seating:before {
+    content: "\e913";
+}
+.flaticon-conference-room:before {
+    content: "\e901";
 }
 
 .flaticon-house:before {
