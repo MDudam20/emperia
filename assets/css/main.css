@@ -7660,3 +7660,6 @@ START: Theme Scroll CSS
  .plan-content .pdf-box .pdf-content h3{
     color: var(--tj-color-common-black);
  }
+ .footer-thumb img{
+    width: 80%;
+ }
