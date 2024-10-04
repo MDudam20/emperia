@@ -1,0 +1,234 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Team CSS
+----------------------------------------*/
+.team-section {
+    @media #{$md} {
+        padding-bottom: 50px;
+    }
+    @media #{$sm} {
+        padding-bottom: 40px;
+    }
+}
+.team-item {
+    @media #{$md} {
+        margin-bottom: 20px;
+    }
+    .team-thumb {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+        .team-social {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            li {
+                display: inline-flex;
+                transform: translateY(30px);
+                transition: all 0.3s linear;
+                visibility: hidden;
+                opacity: 0;
+                @media #{$md} {
+                    transform: translateY(0px);
+                    visibility: visible;
+                    opacity: 1;
+                }
+                &:nth-child(2) {
+                    transition-delay: 0.05s;
+                }
+                &:nth-child(3) {
+                    transition-delay: 0.1s;
+                }
+                &:nth-child(4) {
+                    transition-delay: 0.15s;
+                }
+                a {
+                    background-color: var(--tj-color-theme-bg-dark-light);
+                    color: var(--tj-color-common-white);
+                    font-size: 18px;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                    transition: all 0.3s linear;
+                    &:hover {
+                        background-color: var(--tj-color-theme-primary);
+                    }
+                }
+            }
+        }
+    }
+    &:hover .team-social li {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+    .team-content {
+        padding: 25px;
+        border: 1px solid var(--tj-color-grey-9);
+        transition: all 0.3s linear;
+        .team-member {
+            font-family: var(--tj-ff-body);
+            color: var(--tj-color-grey-9);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .member-prof {
+            color: var(--tj-color-grey-9);
+            line-height: 1;
+        }
+    }
+    &:hover .team-content {
+        background-color: var(--tj-color-theme-primary);
+        border: 1px solid var(--tj-color-theme-primary);
+    }
+    &:hover .member-prof,
+    &:hover .team-member {
+        color: var(--tj-color-common-white);
+    }
+}
+
+.team-2 {
+    padding-bottom: 90px;
+    @media #{$md} {
+        padding-bottom: 40px;
+    }
+    @media #{$sm} {
+        padding-bottom: 30px;
+    }
+    .team-item {
+        margin-bottom: 30px;
+        .team-thumb {
+            .team-social {
+                a {
+                    background-color: var(--tj-color-common-white);
+                    color: var(--tj-color-theme-primary);
+                    &:hover {
+                        color: var(--tj-color-common-white);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Team Details
+.team-details {
+    padding-bottom: 0;
+}
+.team-details-box {
+    display: flex;
+    align-items: center;
+    column-gap: 45px;
+    padding: 65px;
+    max-width: 1075px;
+    width: 100%;
+    margin: 0 auto;
+    @media #{$md} {
+        padding-bottom: 40px;
+        flex-direction: column;
+        align-items: baseline;
+        row-gap: 30px;
+    }
+    @media #{$md, $sm} {
+        padding: 35px;
+    }
+    .right-details {
+        .team-author {
+            font-size: 30px;
+            font-family: var(--tj-ff-body);
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+        .team-details-list {
+            margin-bottom: 40px;
+            li {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                margin-bottom: 20px;
+                @media #{$sm} {
+                    font-size: 12px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .desc {
+                    color: var(--tj-color-grey-9);
+                    width: 200px;
+                    font-size: 18px;
+                    display: block;
+                    @media #{$sm} {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+        .team-details-social {
+            list-style: none;
+            li {
+                a {
+                    background-color: var(--tj-color-theme-bg-dark-deep);
+                    color: var(--tj-color-theme-primary);
+                    font-size: 18px;
+                    width: 50px;
+                    padding: 15px 0;
+                    line-height: 1;
+                    text-align: center;
+                    border: 1px solid var(--tj-color-border-6);
+                    border-radius: 2px;
+                    display: block;
+                    margin-bottom: 10px;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        background-color: var(--tj-color-theme-primary);
+                        color: var(--tj-color-common-white);
+                    }
+                }
+            }
+        }
+    }
+    .left-details {
+        @media #{$md, $sm, $sm, $xs} {
+            width: 100%;
+            img {
+                width: 100%;
+                @media #{$md, $sm, $sm, $xs} {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.team-details-content {
+    background-color: var(--tj-color-theme-bg-dark-light);
+    max-width: 1075px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 65px 65px 65px;
+    @media #{$md, $sm, $xs} {
+        padding: 0 40px 40px 40px;
+    }
+    .content-header {
+        color: var(--tj-color-grey-9);
+        font-family: var(--tj-ff-body);
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* !END: Theme Team CSS */

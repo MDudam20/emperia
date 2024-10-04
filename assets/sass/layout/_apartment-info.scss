@@ -1,0 +1,101 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Apartment Info CSS
+----------------------------------------*/
+
+.apartment-info-item {
+    align-items: center;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--tj-color-border-5);
+    & > div {
+        padding: 0;
+        @media #{$sm} {
+            padding: 0 15px;
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .left-item {
+        @media #{$sm} {
+            margin-bottom: 30px;
+        }
+        .info-number {
+            color: var(--tj-color-theme-primary);
+        }
+        .info-title {
+            color: var(--tj-color-grey-9);
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        .info-icon {
+            column-gap: 5px;
+            i {
+                font-size: 16px;
+                color: var(--tj-color-theme-primary);
+                line-height: 1;
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        li {
+            font-size: 18px;
+            color: var(--tj-color-grey-9);
+            margin-bottom: 20px;
+            @media #{$sm} {
+                margin-bottom: 10px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .mid-item {
+        margin-left: 60px;
+        @media #{$md} {
+            margin-left: 0;
+            margin-top: 30px;
+        }
+        @media #{$sm} {
+            margin-bottom: 30px;
+        }
+        &.item-2 {
+            margin-left: 0;
+        }
+        img {
+            max-width: 330px;
+            @media #{$lg} {
+                max-width: 250px;
+            }
+            @media #{$md} {
+                max-width: 230px;
+            }
+        }
+    }
+    .right-item {
+        text-align: right;
+        @media #{$md} {
+            text-align: left;
+        }
+        .right-title {
+            font-family: var(--tj-ff-body);
+            color: var(--tj-color-grey-9);
+            font-size: 40px;
+            margin-bottom: 0;
+            font-weight: 400;
+            line-height: 1;
+            @media #{$lg} {
+                font-size: 32px;
+            }
+            @media #{$md} {
+                font-size: 32px;
+            }
+        }
+    }
+}
+/* !END: Theme Apartment Info CSS */

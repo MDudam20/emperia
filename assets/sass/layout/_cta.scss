@@ -1,0 +1,51 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme CTA CSS
+----------------------------------------*/
+.cta-section {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @media #{$sm} {
+        height: 400px;
+    }
+}
+.cta-content {
+    .cta-btn {
+        a {
+            background-color: var(--tj-color-common-white);
+            height: 115px;
+            width: 115px;
+            line-height: 105px;
+            text-align: center;
+            border-radius: 50%;
+            border: 5px solid var(--tj-color-theme-primary);
+            margin: 0 auto;
+            margin-bottom: 45px;
+            display: block;
+            @media #{$sm} {
+                height: 80px;
+                width: 80px;
+                line-height: 68px;
+            }
+        }
+    }
+    .cta-header {
+        font-size: 45px;
+        max-width: 620px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        @media #{$sm} {
+            font-size: 24px;
+        }
+    }
+}
+
+/* !END: Theme CTA CSS */

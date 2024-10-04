@@ -1,0 +1,33 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Request CSS
+----------------------------------------*/
+.beauly-contact-form {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    .form-group {
+        margin-bottom: 30px;
+        .form-control {
+            background-color: var(--tj-color-theme-bg-dark-2);
+            font-family: var(--tj-ff-body);
+            color: var(--tj-color-common-white);
+            padding: 15px;
+            letter-spacing: 2px;
+            border: 1px solid var(--tj-color-border-6);
+            box-shadow: none;
+            border-radius: 0;
+            @include tp-placeholder {
+                color: var(--tj-color-grey-10);
+            }
+        }
+        .address {
+            height: 120px;
+        }
+    }
+    .tj-primary-btn {
+        width: 100%;
+    }
+}
+/* !END: Theme Request CSS */

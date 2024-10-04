@@ -1,0 +1,67 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Floor CSS
+----------------------------------------*/
+.floor-section {
+    @media #{$md} {
+        padding-bottom: 30px;
+    }
+    @media #{$sm} {
+        padding-bottom: 10px;
+    }
+}
+
+.floor-item {
+    @media #{$md} {
+        margin-bottom: 40px;
+    }
+    .floor-thumb {
+        height: 250px;
+        margin-bottom: 40px;
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    .floor-content {
+        .floor-title {
+            color: var(--tj-color-grey-9);
+            margin-bottom: 15px;
+        }
+        .floor-list {
+            column-gap: 20px;
+            li {
+                column-gap: 5px;
+                i {
+                    font-size: 16px;
+                    color: var(--tj-color-theme-primary);
+                    line-height: 1;
+                }
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    &.sold {
+        position: relative;
+        .floor-thumb {
+            img {
+                opacity: 0.5;
+            }
+        }
+        .floor-text {
+            position: absolute;
+            top: 20px;
+            right: 70px;
+            span {
+                background-color: var(--tj-color-theme-primary);
+                color: var(--tj-color-common-white);
+                padding: 5px 15px;
+            }
+        }
+    }
+}
+
+/* !END: Theme Floor CSS */

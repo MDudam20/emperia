@@ -1,0 +1,75 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Follow CSS
+----------------------------------------*/
+.follow-section {
+    .follow-container {
+        max-width: 1428px;
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 100%;
+    }
+    .follow-item-wrap {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
+        @media #{$md} {
+            grid-template-columns: repeat(5, 1fr);
+            grid-column-gap: 15px;
+        }
+        @media #{$sm} {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .follow-item {
+            position: relative;
+            &:before {
+                background-color: rgba(0, 0, 0, 0.4);
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                bottom: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.4s linear;
+            }
+            &:hover:before {
+                visibility: visible;
+                opacity: 1;
+            }
+            img {
+                width: 100%;
+            }
+            .follow-icon {
+                color: var(--tj-color-common-white);
+                font-size: 40px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                transition: all 0.3s ease-in-out;
+                :hover {
+                    color: var(--tj-color-theme-primary);
+                }
+            }
+            &:hover .follow-icon {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+    .follow-btn {
+        line-height: 1;
+        &.btn-2 {
+            .tj-primary-btn {
+                color: var(--tj-color-theme-primary);
+                background-color: transparent;
+                border: 1px solid var(--tj-color-theme-primary);
+            }
+        }
+    }
+}
+/* !END: Theme Follow CSS */

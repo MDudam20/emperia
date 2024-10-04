@@ -1,0 +1,111 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme About CSS
+----------------------------------------*/
+.about-section {
+    .row {
+        @media #{$md} {
+            flex-direction: column-reverse;
+        }
+    }
+    .about-thumb {
+        max-width: 518px;
+        margin: 0 auto;
+        @media #{$md} {
+            width: 100%;
+            max-width: inherit;
+        }
+    }
+}
+.about-content {
+    line-height: 1;
+    @media #{$md} {
+        margin-bottom: 40px;
+    }
+    .about-sub-title {
+        color: var(--tj-color-theme-primary);
+        margin-bottom: 20px;
+        line-height: 1;
+        @media #{$md} {
+            font-size: 20px;
+        }
+        i {
+            font-size: 35px;
+            margin-right: 10px;
+            @media #{$md} {
+                font-size: 20px;
+            }
+        }
+    }
+    .about-title {
+        margin-bottom: 22px;
+        max-width: 500px;
+        width: 100%;
+        @media #{$sm} {
+            font-size: 36px;
+        }
+    }
+    p {
+        margin-bottom: 50px;
+        max-width: 600px;
+        width: 100%;
+        @media #{$md} {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.about-section-2 {
+    .row {
+        @media #{$md} {
+            flex-direction: column-reverse;
+        }
+    }
+    .about-thumb {
+        max-width: 520px;
+        margin: 0 auto;
+        @media #{$md} {
+            max-width: inherit;
+        }
+    }
+    .about-content {
+        .about-sub-title {
+            color: var(--tj-color-theme-primary);
+            margin-bottom: 27px;
+            line-height: 1;
+            @media #{$sm} {
+                font-size: 20px;
+            }
+        }
+        .about-title {
+            color: var(--tj-color-grey-9);
+            font-size: 48px;
+            line-height: 1;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            @media #{$sm} {
+                font-size: 36px;
+            }
+        }
+        p {
+            margin-bottom: 45px;
+            @media #{$md} {
+                margin-bottom: 30px;
+            }
+            @media #{$sm} {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.about-section {
+    @media #{$md} {
+        .about-wrapper {
+            flex-direction: column;
+        }
+    }
+}
+
+/* !END: Theme About CSS */

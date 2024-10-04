@@ -1,0 +1,404 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Hero CSS
+----------------------------------------*/
+.hero-section {
+	@include background;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: var(--tj-color-common-black);
+		opacity: 0.45;
+		z-index: -1;
+	}
+
+	@media #{$md, $sm, $xs} {
+		height: auto;
+		padding: 200px 0;
+	}
+	.hero-text {
+		position: absolute;
+		bottom: 50px;
+		left: 50px;
+		@media #{$md} {
+			bottom: 30px;
+		}
+		@media #{$sm} {
+			left: 30px;
+			bottom: 15px;
+		}
+		p {
+			font-family: var(--tj-ff-body);
+			color: var(--tj-color-common-white);
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 1.3em;
+			margin-bottom: 0;
+			@media #{$sm} {
+				font-size: 15px;
+			}
+		}
+	}
+	.text-2 {
+		left: auto;
+		right: 50px;
+		@media #{$sm} {
+			right: 30px;
+			bottom: 25px;
+		}
+	}
+}
+
+.hero-content {
+	@media #{$xl} {
+		margin-top: 50px;
+	}
+	.hero-sub-title {
+		font-family: var(--tj-ff-heading);
+		color: var(--tj-color-common-white);
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 1;
+		margin-bottom: 35px;
+		@media #{$xl} {
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+		@media #{$md} {
+			margin-bottom: 20px;
+		}
+		@media #{$sm} {
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+	}
+	.hero-title {
+		max-width: 760px;
+		margin: 0 auto 40px auto;
+		width: 100%;
+		@media #{$xl, $lg} {
+			margin: 0 auto 20px auto;
+			font-size: 60px;
+			max-width: 625px;
+		}
+		@media #{$md} {
+			font-size: 60px;
+		}
+		@media #{$sm} {
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+	}
+	p {
+		max-width: 520px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Hero Two //
+.hero-section-2 {
+	position: relative;
+	height: 750px;
+	z-index: 1;
+	@media #{$md} {
+		height: auto;
+		z-index: 1;
+		padding: 100px 0 140px 20px;
+	}
+	@media #{$sm} {
+		padding: 60px 0 120px 10px;
+	}
+	.hero-bg {
+		background-image: url(../img/bg-img/hero-bg-2.jpg);
+		background-repeat: no-repeat;
+		background-position: bottom left;
+		background-size: cover;
+		width: 50%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		@media #{$md} {
+			display: none;
+		}
+	}
+	.hero-container {
+		max-width: 1475px;
+		margin: auto;
+		padding: 0 15px;
+		width: 100%;
+		.hero-content {
+			.hero-content-wrap {
+				column-gap: 40px;
+				margin-bottom: 30px;
+				.content-box {
+					column-gap: 10px;
+					i {
+						color: var(--tj-color-theme-primary);
+						font-size: 30px;
+						line-height: 1;
+					}
+					h4 {
+						color: var(--tj-color-theme-primary);
+						font-size: 18px;
+						font-weight: 400;
+						margin-bottom: 0;
+						line-height: 1;
+					}
+					&:nth-child(2) {
+						i {
+							font-size: 25px;
+						}
+					}
+				}
+			}
+		}
+		.hero-title {
+			color: var(--tj-color-grey-9);
+			font-size: 75px;
+			margin-bottom: 15px;
+			@media #{$lg} {
+				font-size: 50px;
+			}
+			@media #{$md} {
+				font-size: 50px;
+				margin: 0;
+			}
+			@media #{$sm} {
+				font-size: 40px;
+			}
+		}
+	}
+	.hero-text {
+		background-color: var(--tj-color-theme-primary);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 15px 25px;
+		i {
+			color: var(--tj-color-common-white);
+			font-size: 25px;
+			margin-right: 10px;
+			line-height: 1;
+		}
+		h4 {
+			font-family: var(--tj-ff-body);
+			font-size: 18px;
+			font-weight: 400;
+			margin-bottom: 0;
+			line-height: 1;
+			@media #{$sm} {
+				font-size: 16px;
+			}
+		}
+	}
+	.hero-box {
+		background-color: var(--tj-color-common-white);
+		position: absolute;
+		right: 40px;
+		bottom: 40px;
+		padding: 15px 26px;
+		column-gap: 30px;
+		border-radius: 80px;
+		@media #{$md} {
+			display: none !important;
+		}
+		.hero-box-thumb {
+			height: 80px;
+			width: 80px;
+			border-radius: 50%;
+			overflow: hidden;
+			img {
+				object-fit: cover;
+			}
+		}
+		h3 {
+			font-size: 22px;
+			color: var(--tj-color-common-black);
+			margin-bottom: 0;
+			line-height: 1;
+			span {
+				display: block;
+				margin-top: 15px;
+			}
+		}
+	}
+}
+
+// Hero Three //
+.hero-3 {
+	background-image: url(../img/bg-img/hero-bg-3.jpg);
+	height: 1000px;
+	@media #{$xl} {
+		height: 650px;
+	}
+	@media #{$md} {
+		height: 650px;
+	}
+	@media #{$sm} {
+		height: auto;
+		padding: 180px 0 120px 0;
+	}
+	.hero-content {
+		margin-top: 80px;
+		@media #{$md} {
+			margin-top: 30px;
+		}
+		@media #{$sm} {
+			margin-top: 10px;
+		}
+		.hero-sub-title {
+			margin-bottom: 37px;
+			@media #{$md} {
+				margin-bottom: 25px;
+			}
+		}
+		.hero-title {
+			margin: 0 0 30px 0;
+			@media #{$md} {
+				font-size: 60px;
+			}
+			@media #{$sm} {
+				font-size: 40px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.hero-sidebar {
+		background-color: var(--tj-color-theme-bg-dark-deep-2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 95px;
+		width: 1000px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: rotate(90deg) scaleX(-1);
+		transform-origin: top right;
+		z-index: 101;
+		@media #{$md} {
+			display: none;
+		}
+		@media #{$sm} {
+			display: none;
+		}
+		.hero-sidemenu-list {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			column-gap: 55px;
+			list-style: none;
+			transform: scaleX(-1);
+			li {
+				display: flex;
+				align-items: center;
+				i {
+					color: var(--tj-color-theme-primary);
+					font-size: 16px;
+				}
+				a {
+					color: var(--tj-color-common-white);
+					font-size: 18px;
+					margin-left: 15px;
+					@media #{$md} {
+						font-size: 15px;
+					}
+				}
+				.hero-social-list {
+					li {
+						display: inline-flex;
+						margin-right: 15px;
+						i {
+							color: var(--tj-color-common-white);
+							font-size: 18px;
+						}
+						a {
+							margin-left: 0;
+						}
+						&:nth-child(2) {
+							i {
+								font-size: inherit;
+								line-height: inherit;
+							}
+						}
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+				}
+				&:nth-child(2) {
+					i {
+						font-size: 18px;
+						line-height: 1;
+						display: inline-flex;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Hero Four //
+.hero-section-4 {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 900px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	@media #{$xl, $lg} {
+		height: 600px;
+	}
+	@media #{$md, $sm} {
+		height: auto;
+		padding: 180px 0;
+	}
+	@media #{$xs} {
+		height: auto;
+		padding: 150px 0;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+}
+.hero-content.content-2 {
+	.hero-sub-title {
+		margin-bottom: 40px;
+		@media #{$md} {
+			margin-bottom: 30px;
+		}
+		@media #{$sm} {
+			margin-bottom: 20px;
+		}
+	}
+	.hero-title {
+		@media #{$lg} {
+			font-size: 85px;
+			max-width: inherit;
+		}
+	}
+}
+
+/* !END: Theme Hero CSS */

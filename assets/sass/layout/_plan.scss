@@ -1,0 +1,88 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Plan CSS
+----------------------------------------*/
+.plan-section {
+    .plan-content {
+        margin-right: 32.5px;
+        @media #{$md} {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.plan-content {
+    p {
+        margin-bottom: 35px;
+    }
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--tj-color-border-6);
+            }
+            h3 {
+                font-family: var(--tj-ff-body);
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 1;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .pdf-box {
+        margin-top: 55px;
+        column-gap: 10px;
+        @media #{$md} {
+            margin-top: 25px;
+        }
+        h3 {
+            font-family: var(--tj-ff-body);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.plan-tab {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: none;
+        column-gap: 30px;
+        margin-bottom: 80px;
+        @media #{$md} {
+            margin-bottom: 30px;
+        }
+    }
+    .nav-tabs {
+        border-bottom: none;
+        .nav-link {
+            background-color: transparent;
+            border: 1px solid transparent;
+            color: var(--tj-color-common-white);
+            font-size: 18px;
+            &:hover {
+                color: var(--tj-color-theme-primary);
+                border-right: 1px solid var(--tj-color-theme-primary);
+                border-bottom: 1px solid var(--tj-color-theme-primary);
+            }
+            &.active {
+                color: var(--tj-color-theme-primary);
+                border-right: 1px solid var(--tj-color-theme-primary);
+                border-bottom: 1px solid var(--tj-color-theme-primary);
+            }
+        }
+    }
+}
+
+/* !END: Theme Plan CSS */

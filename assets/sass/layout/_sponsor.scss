@@ -1,0 +1,27 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Sponsor CSS
+----------------------------------------*/
+.sponsor-section {
+    .sponsor-carousel {
+        .item {
+            img {
+                max-width: 110px;
+                margin: 0 auto;
+                height: 40px;
+            }
+        }
+    }
+}
+
+.sponsor-2 {
+    padding: 90px 0;
+    @media #{$md} {
+        padding: 60px 0;
+    }
+    @media #{$sm} {
+        padding: 50px 0;
+    }
+}
+/* !END: Theme Sponsor CSS */

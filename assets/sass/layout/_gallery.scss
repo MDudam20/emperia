@@ -1,0 +1,291 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Gallery CSS
+----------------------------------------*/
+.gallery-section {
+    position: relative;
+    .beauly-gallery-wrap {
+        .gallery-filter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 60px;
+            @media #{$md} {
+                margin-bottom: 40px;
+            }
+            li {
+                font-family: var(--tj-ff-heading);
+                color: var(--tj-color-text-body);
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 1;
+                display: inline-flex;
+                margin: 0 25px;
+                cursor: pointer;
+                @media #{$sm} {
+                    font-size: 18px;
+                }
+                &:hover {
+                    color: var(--tj-color-theme-primary);
+                }
+                &.active {
+                    color: var(--tj-color-theme-primary);
+                    text-decoration: line-through;
+                }
+            }
+        }
+        .property-gallery {
+            position: relative;
+            .item {
+                max-width: 1030px;
+                margin: 0 auto;
+                position: relative;
+                @media #{$lg} {
+                    max-width: 730px;
+                }
+                @media #{$md} {
+                    max-width: 500px;
+                }
+                .video-btn {
+                    a {
+                        background-color: var(--tj-color-theme-primary);
+                        color: var(--tj-color-common-white);
+                        font-size: 35px;
+                        width: 120px;
+                        padding: 33px 0;
+                        text-align: center;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: all 0.3s ease-in-out;
+                        z-index: 2;
+                        &:hover {
+                            background-color: var(--tj-color-common-white);
+                            color: var(--tj-color-theme-primary);
+                        }
+                        @media #{$md} {
+                            font-size: 20px;
+                            width: 80px;
+                            padding: 25px 0;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .owl-carousel .owl-nav > div {
+        font-size: 80px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        @media #{$xs} {
+            font-size: 40px;
+        }
+        &.owl-next {
+            left: auto;
+            right: 60px;
+            @media #{$xl} {
+                right: -20px;
+            }
+            @media #{$lg} {
+                right: 20px;
+            }
+            @media #{$md} {
+                right: 35px;
+            }
+        }
+        &.owl-prev {
+            left: 60px;
+            @media #{$xl} {
+                left: -20px;
+            }
+            @media #{$lg} {
+                left: 20px;
+            }
+            @media #{$md} {
+                left: 35px;
+            }
+        }
+    }
+}
+
+.gallery-section-2 {
+    .gallery-top {
+        align-items: center;
+        @media #{$md} {
+            flex-direction: column;
+            -webkit-box-align: left;
+            -ms-flex-align: left;
+            align-items: left;
+            margin-bottom: 40px;
+        }
+        .section-heading {
+            @media #{$md} {
+                text-align: center;
+            }
+            p {
+                @media #{$md} {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .nav-tabs {
+            border-bottom: none;
+            .nav-link {
+                color: var(--tj-color-text-body);
+                font-size: 22px;
+                font-weight: var(--tj-fw-medium);
+                border: none;
+                padding: 0;
+                margin-left: 50px;
+                @media #{$lg} {
+                    font-size: 18px;
+                    margin-left: 25px;
+                }
+                @media #{$sm} {
+                    font-size: 18px;
+                    margin-left: 0;
+                    margin: 0 20px;
+                }
+            }
+            .active {
+                background-color: transparent;
+                color: var(--tj-color-theme-primary);
+                text-decoration: line-through;
+            }
+        }
+    }
+    .tab-content {
+        position: relative;
+    }
+    .beauly-gallery-wrap {
+        .carousel {
+            position: inherit;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 30px;
+            @media #{$md} {
+                grid-template-columns: 1fr;
+                row-gap: 20px;
+            }
+        }
+        .carousel-inner {
+            margin-bottom: 25px;
+            @media #{$md} {
+                margin-bottom: 15px;
+            }
+            .gallery-inner-thumb {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .gallery-nav {
+            position: inherit;
+            margin: 0;
+            column-gap: 25px;
+            @media #{$md} {
+                column-gap: 15px;
+            }
+            & [data-bs-target] {
+                background-color: transparent;
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0;
+                text-indent: inherit;
+                border: none;
+                opacity: 1;
+            }
+        }
+        .gallery-nav.right {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: auto;
+            bottom: auto;
+            [data-bs-slide-to] {
+                background-color: var(--tj-color-theme-bg-primary-blur);
+                position: absolute;
+            }
+            [data-bs-slide-to="0"] {
+                width: 153px;
+                height: 153px;
+                left: 19.2%;
+                top: 8.9%;
+            }
+            [data-bs-slide-to="1"] {
+                top: 9%;
+                right: 24%;
+                height: 183px;
+                width: 141px;
+                left: auto;
+            }
+            [data-bs-slide-to="2"] {
+                bottom: 26.5%;
+                left: 19.2%;
+                height: 156px;
+                width: 154px;
+            }
+            [data-bs-slide-to="3"] {
+                bottom: 13%;
+                right: 5%;
+                height: 175px;
+                width: 275px;
+            }
+        }
+    }
+    .gallery-item-wrap {
+        .owl-nav {
+            display: none;
+        }
+    }
+    .gallery-box-wrap {
+        .owl-nav {
+            display: none;
+        }
+    }
+}
+
+.video-btn {
+    a {
+        background-color: var(--tj-color-theme-primary);
+        color: var(--tj-color-common-white);
+        font-size: 35px;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease-in-out;
+        z-index: 2;
+        &:hover {
+            background-color: var(--tj-color-common-white);
+            color: var(--tj-color-theme-primary);
+        }
+        @media #{$md} {
+            font-size: 20px;
+            width: 80px;
+            height: 80px;
+            margin-top: 10px;
+        }
+    }
+}
+
+/* !END: Theme Gallery CSS */

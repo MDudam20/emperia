@@ -1,0 +1,202 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Project CSS
+----------------------------------------*/
+.project-section {
+    padding-bottom: 90px;
+    @media #{$md} {
+        padding-bottom: 40px;
+    }
+    @media #{$sm} {
+        padding-bottom: 30px;
+    }
+}
+
+.project-item {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: 0.4s;
+    .project-text {
+        background-color: var(--tj-color-theme-primary);
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        padding: 5px 15px;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+        transition: 0.4s;
+        span {
+            color: var(--tj-color-common-white);
+            font-size: 18px;
+            font-weight: 400;
+            display: block;
+        }
+    }
+    .project-thumb {
+        overflow: hidden;
+        img {
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    .project-content {
+        background-color: var(--tj-color-theme-bg-dark-light);
+        padding: 25px 30px;
+        .project-item-title {
+            margin-bottom: 15px;
+        }
+        .project-list {
+            column-gap: 20px;
+            li {
+                column-gap: 5px;
+                i {
+                    font-size: 16px;
+                    color: var(--tj-color-theme-primary);
+                    line-height: 1;
+                }
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    &:hover .project-thumb img {
+        transform: scale(1.1);
+    }
+}
+
+.project-2 {
+    padding-bottom: 120px;
+    @media #{$md} {
+        padding-bottom: 70px;
+    }
+    @media #{$sm} {
+        padding-bottom: 60px;
+    }
+    overflow: hidden;
+    .project-top {
+        margin-bottom: 60px;
+        align-items: center;
+        @media #{$md} {
+            margin-bottom: 30px;
+        }
+        @media #{$sm} {
+            text-align: center;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        .section-heading {
+            margin-bottom: 0;
+        }
+        .custom-next-prev-wrap {
+            column-gap: 30px;
+            .owl-next,
+            .owl-prev {
+                color: var(--tj-color-common-white);
+                font-size: 20px;
+                width: 60px;
+                line-height: 1;
+                padding: 20px 0;
+                text-align: center;
+                border: 1px solid var(--tj-color-common-white);
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                i {
+                    transition: all 0.3s ease-in-out;
+                    &:before {
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &:hover {
+                    color: var(--tj-color-theme-primary);
+                    border: 1px solid var(--tj-color-theme-primary);
+                }
+            }
+        }
+    }
+}
+
+.project-item.item-2 {
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+    @media #{$sm} {
+        margin: 0 20px;
+    }
+    .project-content {
+        width: 90%;
+        position: absolute;
+        bottom: -200px;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+        @media #{$xl} {
+            width: 95%;
+        }
+        @media #{$lg} {
+            padding: 20px 15px;
+        }
+        @media #{$sm} {
+            bottom: 30px;
+        }
+        h3 {
+            @media #{$xl} {
+                font-size: 20px;
+            }
+            @media #{$lg} {
+                font-size: 16px;
+            }
+        }
+        h4 {
+            font-family: var(--tj-ff-body);
+            font-size: 30px;
+            color: var(--tj-color-theme-primary);
+            margin-bottom: 15px;
+            @media #{$lg} {
+                font-size: 20px;
+            }
+        }
+    }
+    .project-text {
+        background-color: transparent;
+        padding: 0;
+        top: -35px;
+        right: -35px;
+        @media #{$sm} {
+            top: 25px;
+            right: 15px;
+        }
+        span {
+            font-size: 24px;
+            line-height: 1;
+        }
+    }
+    .round-shape {
+        background-color: var(--tj-color-theme-primary);
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: absolute;
+        top: -200px;
+        right: -200px;
+        transition: all 0.3s ease-in-out;
+        @media #{$sm} {
+            top: -100px;
+            right: -100px;
+        }
+    }
+    &:hover .project-content {
+        bottom: 30px;
+    }
+    &:hover .project-text {
+        top: 25px;
+        right: 15px;
+    }
+    &:hover .round-shape {
+        top: -100px;
+        right: -100px;
+    }
+}
+
+/* !END: Theme Project CSS */

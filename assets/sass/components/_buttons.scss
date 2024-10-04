@@ -1,0 +1,56 @@
+@use "../utilities" as *;
+
+/**
+  Buttons CSS
+*/
+.tj-primary-btn {
+    background: var(--tj-color-theme-primary);
+    color: var(--tj-color-common-white);
+    font-family: var(--tj-ff-primary);
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: capitalize;
+    padding: 20px 35px;
+    letter-spacing: 0;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    &:focus,
+    &:hover {
+        color: var(--tj-color-common-white);
+    }
+    @media #{$sm} {
+        font-size: 15px;
+        padding: 15px 25px;
+    }
+    span {
+        position: relative;
+        z-index: 20;
+    }
+    &:after {
+        background: var(--tj-color-common-white);
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: 0.2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: -1;
+    }
+    &:hover:after {
+        left: 120%;
+        transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    i {
+        margin-left: 20px;
+        @media #{$sm} {
+            margin-left: 10px;
+        }
+    }
+}

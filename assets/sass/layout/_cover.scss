@@ -1,0 +1,75 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Cover CSS
+----------------------------------------*/
+.cover-section {
+    .cover-wrap {
+        & > div {
+            padding: 0;
+            @media #{$sm} {
+                width: 50%;
+            }
+        }
+        .cover-item {
+            position: relative;
+            @media #{$md} {
+                height: auto;
+            }
+            .cover-img {
+                height: 414px;
+                @media #{$sm} {
+                    height: 300px;
+                }
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .cover-content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    .cover-title {
+                        margin-bottom: -5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cover-2 {
+    @media #{$md} {
+        padding-bottom: 40px;
+    }
+    .cover-wrap {
+        & > div {
+            padding: 0 15px;
+            @media #{$md} {
+                padding: 0 10px;
+            }
+        }
+        .cover-item {
+            @media #{$md} {
+                margin-bottom: 20px;
+            }
+            .cover-title {
+                text-align: center;
+                @media #{$sm} {
+                    font-size: 18px;
+                }
+            }
+            .cover-img {
+                @media #{$lg} {
+                    height: 300px;
+                }
+                @media #{$sm} {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+
+/* !END: Theme Cover CSS */
