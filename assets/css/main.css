@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Old+Standard+TT:wght@400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     /**
      @Font-Family Declaration
    */
-    --tj-ff-body: 'Jost', sans-serif;
-    --tj-ff-heading: 'Old Standard TT', serif;
-    --tj-ff-p: 'Jost', sans-serif;
-    --tj-ff-fontawesome: "Font Awesome 6 Pro";
+    --tj-ff-body: "Poppins", system-ui;
+    --tj-ff-heading:"Exo 2", system-ui;
+    --tj-ff-p: "Poppins", system-ui;
+    --tj-ff-fontawesome: "Poppins", system-ui;
     /**
      @Font-weight Declaration
    */
@@ -142,7 +142,9 @@ p {
     color: var(--tj-color-common-black);
     margin-bottom: 15px;
     line-height: 26px;
+    text-align: justify;
 }
+
 
 .btn,
 button,
@@ -7810,7 +7812,7 @@ START: Theme Scroll CSS
     width: 45px;
     height: 45px;
     float: left;
-    background: #FF6700;
+    background:  var(--tj-color-theme-primary);
     font-size: 25px;
     margin: 0 15px 0 0;
     text-align: center;
@@ -7821,7 +7823,7 @@ START: Theme Scroll CSS
 .fixedcall a p {
     margin: 0;
     padding: 7px;
-    color: #FF6700;
+    color: var(--tj-color-theme-bg-dark-deep);
 }
 
 .fixedcall a svg {
@@ -7871,19 +7873,19 @@ START: Theme Scroll CSS
     width: 45px;
     height: 45px;
     float: left;
-    background: #FF6700;
+    background: var(--tj-color-theme-primary);
     font-size: 25px;
     margin: 0 15px 0 0;
     text-align: center;
     line-height: 45px;
     /* color: #fff; */
-    color: #27ff00;
+    color: #fff;
 }
 
 .fixedwhatapp a p {
     margin: 0;
     padding: 7px;
-    color: #FF6700;
+    color: var(--tj-color-theme-bg-dark-deep);
 }
 
 .fixedwhatapp a svg {
@@ -8054,3 +8056,131 @@ START: Theme Scroll CSS
     -webkit-animation-name: flipInY;
     animation-name: flipInY;
 }
+
+
+.location_section {
+    padding: 140px 0;
+    position: relative;
+    
+}
+
+.location_section:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 30%;
+    top: 0;
+    right: 0;
+    background: var(--light-black);
+}
+
+.location_section .ov_headings {
+    border-color: #2f2f2f;
+}
+
+.location_section .location_image {
+    height: 100%;
+    border: 5px solid rgb(255 255 255 / 25%);
+}
+
+.location_section .location_image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.location_section .points {
+    padding-left: 15px;
+}
+.location_section p{
+    color: var(--tj-color-common-white);
+}
+.location_section .points li {
+    list-style-type: circle;
+    margin-bottom: 12px;
+    color: var(--tj-color-common-white);
+}
+
+.nav-pills {
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-pills .nav-link {
+   color: var(--tj-color-common-white);
+    border: 1px #fff solid;
+    border-radius: 12px;
+    margin-right: 10px;
+  }
+  
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    color: var(--tj-color-theme-primary);
+    background-color: var(--tj-color-common-white);
+  }
+  
+
+  .accordion {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #000;
+    overflow: hidden; /* Add overflow property to prevent content from affecting layout */
+
+  }
+  
+  .accordion-title {
+    background-color:#fff; /* Updated question box color */
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3);
+    color:var(--yellow); /* Question text color */
+    position: relative;
+    transition: background-color 0.5s all;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  
+  .accordion-title::after {
+    content: '\25B8';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease;
+  }
+  
+  .accordion-content {
+    padding: 15px;
+    display: none;
+    background-color: #fff;
+    color: #333;
+    transition: max-height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .accordion-item.active .accordion-title {
+    background-color: var(--tj-color-theme-primary);
+   color: #fff;
+   border:1px solid var(--yellow);
+  }
+  
+  .accordion-item.active .accordion-title::after {
+    content: '\25BE';
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .accordion-item.active .accordion-content {
+    display: block;
+   padding: 20px;
+    color: var(--tj-color-common-black);
+    
+    background-color: #fff;
+  }
+
+  @media(max-width:770px) {
+    .accordion{
+        padding: 30px 0px;
+    }
+  }
