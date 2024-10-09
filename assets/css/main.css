@@ -2800,6 +2800,7 @@ START: Theme About CSS
     color: #E3B574;
     margin-bottom: 20px;
     line-height: 1;
+    font-size: 20px;
 }
 
 @media (max-width: 991px) {
@@ -2809,7 +2810,7 @@ START: Theme About CSS
 }
 
 .about-content .about-sub-title i {
-    font-size: 35px;
+    font-size: 30px;
     margin-right: 10px;
 }
 
@@ -2821,9 +2822,12 @@ START: Theme About CSS
 
 .about-content .about-title {
     margin-bottom: 22px;
-    max-width: 500px;
+    /* max-width: 500px; */
     width: 100%;
+    font-size: 40px;
+    font-weight: 400;
 }
+
 
 @media (max-width: 767px) {
     .about-content .about-title {
@@ -3320,7 +3324,8 @@ START: Theme Amenities CSS
 
 .amenities-2 .section-heading .section-title {
     line-height: 1.2;
-    color: var(--tj-color-common-black)
+    color: var(--tj-color-common-black);
+   
 }
 
 .amenities-box {
@@ -8213,9 +8218,9 @@ START: Theme Scroll CSS
         padding: 30px 0px;
     }
   }
-.a{
-
-}
+/* .a{
+color: var(--tj-color-theme-bg-dark-deep);
+} */
 .about-thumb {
     position: relative;
     overflow: hidden;
