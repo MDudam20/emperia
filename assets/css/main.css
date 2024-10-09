@@ -8367,37 +8367,37 @@ color: var(--tj-color-theme-bg-dark-deep);
 }
 
 .hero-section-slider-1 {
-    background-image:url('/assets/img/banner/lobby-bg.webp');
+    background-image:url('../img/banner/lobby-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .hero-section-slider-2 {
-    background-image: url('assets/img/banner/office-bg.webp');
+    background-image: url('../img/banner/office-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .hero-section-slider-3 {
-    background-image: url('assets/img/banner/conference-bg.webp');
+    background-image: url('../img/banner/conference-bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .hero-section-slider-4 {
-    background-image: url('assets/img/banner/fashion-bg.png.png');
+    background-image: url('../img/banner/fashion-bg.png.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .hero-section-slider-5 {
-    background-image: url('assets/img/banner/parking-bg.png.png');
+    background-image: url('../img/banner/parking-bg.png.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .hero-section-slider-6 {
-    background-image: url('assets/img/banner/gym-bg.png.png');
+    background-image: url('../img/banner/gym-bg.png.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
