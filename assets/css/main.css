@@ -412,6 +412,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+   
 }
 
 .section-heading p:last-child {
@@ -572,6 +573,7 @@ img {
     overflow: hidden;
     position: relative;
     z-index: 1;
+    border-radius: 15px;
 }
 
 .tj-primary-btn:focus,
@@ -639,13 +641,13 @@ START: Theme Header CSS
 ----------------------------------------*/
 
 .header {
-    background-color: transparent;
+    background-color: #78081c;
     border-bottom: 1px solid transparent;
     width: 100%;
     height: auto;
     display: block;
     position: absolute;
-    top: 20px;
+    /* top: 20px; */
     z-index: 99;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -7047,7 +7049,7 @@ START: Theme footer CSS
     font-family: var(--tj-ff-body);
     /* color: var(--tj-color-grey-9); */
     color: #E3B574;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: 500;
 }
 
@@ -7782,8 +7784,8 @@ START: Theme Scroll CSS
     width: 105px;
 }
 
-.request-section .section-heading .section-title {
-    color: var(--tj-color-common-black);
+.request-section .section-heading  p{
+    color:var(--tj-color-common-white);
 }
 
 .plan-section p {
@@ -8097,6 +8099,11 @@ START: Theme Scroll CSS
     position: relative;
     
 }
+.location_section .section-heading .section-title{
+    color:var(--tj-color-theme-bg-dark);
+}
+
+
 
 .location_section:before {
     position: absolute;
@@ -8114,7 +8121,8 @@ START: Theme Scroll CSS
 
 .location_section .location_image {
     height: 100%;
-    border: 5px solid rgb(255 255 255 / 25%);
+    border: 5px solid black;
+    border-radius: 10px;
 }
 
 .location_section .location_image img {
@@ -8126,12 +8134,12 @@ START: Theme Scroll CSS
     padding-left: 15px;
 }
 .location_section p{
-    color: var(--tj-color-common-white);
+    color: var(--tj-color-theme-bg-dark-light);
 }
 .location_section .points li {
     list-style-type: circle;
     margin-bottom: 12px;
-    color: var(--tj-color-common-white);
+    color: var(--tj-color-theme-bg-dark);
 }
 
 .nav-pills {
@@ -8314,4 +8322,43 @@ color: var(--tj-color-theme-bg-dark-deep);
 /* Show the zoom icon when hovering */
 .floor-thumb:hover a::before {
     opacity: 1;
+}
+
+.newimage{
+    height: 200px;
+}
+
+
+/* Define the rotation animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply the rotation animation to the image */
+.rotate-image {
+    animation: rotate 5s infinite linear; /* Adjust time (5s) for speed of rotation */
+}
+/* Define the left-to-right animation */
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+}
+
+/* Apply the movement animation to the logo */
+.move-logo {
+    animation: moveRight 5s linear infinite; /* Adjust time (5s) for speed of movement */
+}
+.classs{
+    height: 100%;
+    border: 5px solid black;
+    border-radius: 10px;
 }
