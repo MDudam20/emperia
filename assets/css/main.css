@@ -392,6 +392,7 @@ img {
     /* font-weight: var(--tj-fw-bold); */
     margin-bottom: 20px;
     font-weight: 500;
+    font-size: 40px
 }
 
 @media (max-width: 991px) {
