@@ -8144,11 +8144,15 @@ START: Theme Scroll CSS
 }
 .location_section p{
     color: var(--tj-color-theme-bg-dark-light);
+    font-size: 18px;
+    font-size: 400;
 }
 .location_section .points li {
     list-style-type: circle;
     margin-bottom: 12px;
     color: var(--tj-color-theme-bg-dark);
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .nav-pills {
