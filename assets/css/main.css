@@ -8304,19 +8304,7 @@ color: var(--tj-color-theme-bg-dark-deep);
 }
 
 /* Zoom icon styling */
-.floor-thumb a::before {
-    content: "\f00e"; /* Font Awesome zoom icon (magnifying glass) */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 40px;
-    color: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+
 
 /* Image zoom effect on hover */
 .floor-thumb img {
@@ -8407,4 +8395,8 @@ color: var(--tj-color-theme-bg-dark-deep);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.text-white{
+    color: white;
 }

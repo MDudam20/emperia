@@ -31535,3 +31535,17 @@
     src: url(../fonts/fa-v4compatibility.woff2) format("woff2"), url(../fonts/fa-v4compatibility.ttf) format("truetype");
     unicode-range: u+f041, u+f047, u+f065-f066, u+f07d-f07e, u+f080, u+f08b, u+f08e, u+f090, u+f09a, u+f0ac, u+f0ae, u+f0b2, u+f0d0, u+f0d6, u+f0e4, u+f0ec, u+f10a-f10b, u+f123, u+f13e, u+f148-f149, u+f14c, u+f156, u+f15e, u+f160-f161, u+f163, u+f175-f178, u+f195, u+f1f8, u+f219, u+f250, u+f252, u+f27a
 }
+
+.floor-thumb a::before {
+    content: "\f002"; /* Font Awesome zoom icon (magnifying glass) */
+    font-family: "FontAwesome";
+    font-weight: 900;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
