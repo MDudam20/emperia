@@ -389,8 +389,9 @@ img {
 }
 
 .section-heading .section-title {
-    font-weight: var(--tj-fw-bold);
+    /* font-weight: var(--tj-fw-bold); */
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 @media (max-width: 991px) {
@@ -2217,7 +2218,7 @@ START: Theme Hero CSS
 (max-width: 767px),
 (max-width: 575px) {
     .hero-section {
-        height: auto;
+        height: 800px;
         padding: 200px 0;
     }
 }
@@ -3327,7 +3328,7 @@ START: Theme Amenities CSS
 .amenities-2 .section-heading .section-title {
     line-height: 1.2;
     color: var(--tj-color-common-black);
-   
+   font-weight: 400;
 }
 
 .amenities-box {
@@ -7750,7 +7751,9 @@ START: Theme Scroll CSS
     background-color: var(--tj-color-common-white);
     border-radius: 12px;
 }
-
+.model-bg{
+    background-color: var(--tj-color-theme-primary);
+}
 
 .modal-body img {
     width: 50px;
@@ -7772,7 +7775,7 @@ START: Theme Scroll CSS
     right: 0px;
     font-size: 13px;
     /* padding: 11px; */
-    background-color: #fff;
+    background-color: var(--tj-color-common-black);
 }
 
 .modal-info {
@@ -7784,7 +7787,7 @@ START: Theme Scroll CSS
 }
 
 .header-logo {
-    width: 105px;
+    width: 150px;
 }
 
 .request-section .section-heading  p{
@@ -8121,6 +8124,9 @@ START: Theme Scroll CSS
 .location_section .ov_headings {
     border-color: #2f2f2f;
 }
+.location_section.ov_headings .section_heading{
+    color: #78081c;
+}
 
 .location_section .location_image {
     height: 100%;
@@ -8328,11 +8334,11 @@ color: var(--tj-color-theme-bg-dark-deep);
 }
 
 .newimage{
-    height: 200px;
+    height: 150px;
+    padding-top: 10px;
 }
+/* 
 
-
-/* Define the rotation animation */
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -8342,24 +8348,24 @@ color: var(--tj-color-theme-bg-dark-deep);
     }
 }
 
-/* Apply the rotation animation to the image */
+
 .rotate-image {
-    animation: rotate 5s infinite linear; /* Adjust time (5s) for speed of rotation */
-}
-/* Define the left-to-right animation */
-@keyframes moveRight {
-    0% {
-        transform: translateX(-100%); /* Start off-screen to the left */
-    }
-    100% {
-        transform: translateX(100%); /* Move off-screen to the right */
-    }
+    animation: rotate 5s infinite linear; 
 }
 
-/* Apply the movement animation to the logo */
-.move-logo {
-    animation: moveRight 5s linear infinite; /* Adjust time (5s) for speed of movement */
-}
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%); 
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+} */
+
+
+/* .move-logo {
+    animation: moveRight 5s linear infinite;
+} */
 .classs{
         height: 100%;
     border: 5px solid black;
