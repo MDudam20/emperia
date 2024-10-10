@@ -142,7 +142,7 @@ p {
     color: var(--tj-color-common-black);
     margin-bottom: 15px;
     line-height: 26px;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 
@@ -392,7 +392,7 @@ img {
     /* font-weight: var(--tj-fw-bold); */
     margin-bottom: 20px;
     font-weight: 500;
-    font-size: 40px
+    font-size: 40px b
 }
 
 @media (max-width: 991px) {
@@ -667,9 +667,10 @@ START: Theme Header CSS
     transition: all 0.3s ease-in-out;
 }
 .newline{
-    border-bottom: 4px solid var(--tj-color-theme-bg-dark);
-    width: 37%;
-    margin:  auto;
+    border-bottom: 4px solid var(--tj-color-common-white);
+    width: 20%;
+    margin:  40px 0px;
+    text-align: start;
     
 }
 
@@ -2269,25 +2270,29 @@ START: Theme Hero CSS
         bottom: 25px;
     }
 }
-
+.hero-content{
+    text-align: left;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
     .hero-content {
         margin-top: 50px;
+        margin-left: 52px;
     }
 }
 
 .hero-content .hero-sub-title {
     font-family: var(--tj-ff-heading);
     color: var(--tj-color-common-white);
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 12px;
     margin-bottom: 35px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
     .hero-content .hero-sub-title {
-        font-size: 25px;
+        /* font-size: 25px; */
+        font-size: 40px;
         margin-bottom: 20px;
     }
 }
@@ -2306,16 +2311,18 @@ START: Theme Hero CSS
 }
 
 .hero-content .hero-title {
-    max-width: 760px;
-    margin: 0 auto 40px auto;
+    /* max-width: 760px; */
+    margin: 0 0 20px 0;
     width: 100%;
+    text-align: left;
+    font-size: 40px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px),
 only screen and (min-width: 992px) and (max-width: 1199px) {
     .hero-content .hero-title {
-        margin: 0 auto 20px auto;
-        font-size: 60px;
+        /* margin: 0 auto 20px auto; */
+        font-size: 40px;
         max-width: 625px;
     }
 }
@@ -3330,6 +3337,7 @@ START: Theme Amenities CSS
     line-height: 1.2;
     color: var(--tj-color-common-black);
    font-weight: 400;
+   font-size: 42px;
 }
 
 .amenities-box {
@@ -4339,6 +4347,8 @@ START: Theme Project CSS
     transition: all 0.3s ease-in-out;
     width: 100%;
     height: 300px;
+    border:5px solid var(--tj-color-theme-bg-dark);
+
 }
 
 .project-item .project-content {
@@ -4405,6 +4415,7 @@ START: Theme Project CSS
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-top: -50px;
 }
 
 @media (max-width: 991px) {
@@ -7392,14 +7403,13 @@ START: Theme footer CSS
 /**----------------------------------------
 START: Theme Preloder CSS
 ----------------------------------------*/
-
 #loading {
     height: 100%;
     width: 100%;
     position: fixed;
     z-index: 99999;
-    margin-top: 0px;
-    top: 0px;
+    top: 0;
+    left: 0;
 }
 
 #loading::after {
@@ -7409,7 +7419,7 @@ START: Theme Preloder CSS
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--tj-color-theme-bg-dark);
+    background-color: var(--tj-color-theme-bg-dark); /* Dark background */
     z-index: -1;
 }
 
@@ -7423,111 +7433,45 @@ START: Theme Preloder CSS
     position: absolute;
     left: 50%;
     top: 50%;
-    height: 200px;
-    width: 200px;
-    margin-top: -100px;
-    margin-left: -100px;
-    -webkit-transform: rotate(-135deg);
-    -ms-transform: rotate(-135deg);
-    transform: rotate(-135deg);
+    transform: translate(-50%, -50%);
 }
 
-#loading #loading-center #loading-center-absolute .object {
-    border-radius: 50% 50% 50% 50%;
-    position: absolute;
-    border-top: 5px solid var(--tj-color-theme-primary);
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid var(--tj-color-theme-primary);
-    border-right: 5px solid transparent;
-    -webkit-animation: animate 2s infinite;
-    animation: animate 2s infinite;
+/* Image loading animation */
+#loading img {
+    width: 150px; /* Set the desired size for your logo */
+    height: auto;
+    animation: spinAndScale 4s infinite ease-in-out; /* Extended to 4 seconds */
 }
 
-#loading #loading-center #loading-center-absolute .object-1 {
-    border-radius: 50% 50% 50% 50%;
-    position: absolute;
-    border-top: 5px solid var(--tj-color-theme-primary);
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid var(--tj-color-theme-primary);
-    border-right: 5px solid transparent;
-    -webkit-animation: animate 2s infinite;
-    animation: animate 2s infinite;
-}
-
-#loading #loading-center #loading-center-absolute .object-2 {
-    border-radius: 50% 50% 50% 50%;
-    position: absolute;
-    border-top: 5px solid var(--tj-color-theme-primary);
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid var(--tj-color-theme-primary);
-    border-right: 5px solid transparent;
-    -webkit-animation: animate 2s infinite;
-    animation: animate 2s infinite;
-}
-
-#loading #loading-center #loading-center-absolute .object-3 {
-    border-radius: 50% 50% 50% 50%;
-    position: absolute;
-    border-top: 5px solid var(--tj-color-theme-primary);
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid var(--tj-color-theme-primary);
-    border-right: 5px solid transparent;
-    -webkit-animation: animate 2s infinite;
-    animation: animate 2s infinite;
-}
-
-#loading #loading-center #loading-center-absolute #object_one {
-    left: 75px;
-    top: 75px;
-    width: 50px;
-    height: 50px;
-}
-
-#loading #loading-center #loading-center-absolute #object_two {
-    left: 65px;
-    top: 65px;
-    width: 70px;
-    height: 70px;
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
-}
-
-#loading #loading-center #loading-center-absolute #object_three {
-    left: 55px;
-    top: 55px;
-    width: 90px;
-    height: 90px;
-    -webkit-animation-delay: 0.4s;
-    animation-delay: 0.4s;
-}
-
-#loading #loading-center #loading-center-absolute #object_four {
-    left: 45px;
-    top: 45px;
-    width: 110px;
-    height: 110px;
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s;
-}
-
+/* Button Styles */
 #loading #loading-center .closeLoader {
     position: absolute;
     bottom: 10px;
     right: 10px;
     z-index: 1;
+    padding: 10px 20px;
+    background-color: var(--tj-color-theme-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-@-webkit-keyframes animate {
-    50% {
-        -webkit-transform: rotate(360deg) scale(0.8);
-        transform: rotate(360deg) scale(0.8);
+#loading #loading-center .closeLoader:hover {
+    background-color: var(--tj-color-theme-bg-dark);
+}
+
+/* Keyframes for spinning and scaling */
+@keyframes spinAndScale {
+    0% {
+        transform: scale(1) rotate(0deg);
     }
-}
-
-@keyframes animate {
     50% {
-        -webkit-transform: rotate(360deg) scale(0.8);
-        transform: rotate(360deg) scale(0.8);
+        transform: scale(1.2) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
     }
 }
 
@@ -8401,7 +8345,24 @@ color: var(--tj-color-theme-bg-dark-deep);
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.hero-section-slider-7 {
+    background-image: url('../img/banner/pool-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero-section-slider-8 {
+    background-image: url('../img/banner/bg-stock.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .text-white{
     color: white;
+}
+.b{
+    
+    margin-bottom: -70px !important;
+    font-weight: 500;
+    font-size: 40px;
 }
