@@ -7706,12 +7706,18 @@ START: Theme Scroll CSS
     padding: 10rem 0rem 0rem;
 }
 
+.modal-logo{
+    position: absolute;
+    top: -27%;
+    left: 36px;
+}
 .modal-highlights {
     margin: 0px;
-    padding: 10px;
-    font-size: 1.2rem;
+    padding: 15px 0px 21px;
+    height: 27px;
+    font-size: 18px;
+    line-height: 6px;
     color: #fff;
-    background: var(--tj-color-theme-bg-dark-light);
 }
 
 .btn-close {
@@ -8375,4 +8381,9 @@ color: var(--tj-color-theme-bg-dark-deep);
   .phone_no_blink {
     animation: blink 1s infinite;
   }
-  
+  .ab{
+    margin-top: -30px  !important;
+  }
+  .textp{
+    text-align: justify;
+  }
