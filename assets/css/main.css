@@ -8366,3 +8366,13 @@ color: var(--tj-color-theme-bg-dark-deep);
     font-weight: 500;
     font-size: 40px;
 }
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .phone_no_blink {
+    animation: blink 1s infinite;
+  }
+  
