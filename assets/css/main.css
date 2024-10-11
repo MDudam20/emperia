@@ -7719,8 +7719,8 @@ START: Theme Scroll CSS
     top: 0px;
     right: 0px;
     font-size: 13px;
-    /* padding: 11px; */
-    background-color: var(--tj-color-common-black);
+    padding: 11px;
+    /* background-color: var(--tj-color-common-black); */
 }
 
 .modal-info {
@@ -8352,7 +8352,7 @@ color: var(--tj-color-theme-bg-dark-deep);
     background-repeat: no-repeat;
 }
 .hero-section-slider-8 {
-    background-image: url('../img/banner/bg-stock.webp');
+    background-image: url('../img/banner/bg-stock-63IgMqRpT-transformed.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
