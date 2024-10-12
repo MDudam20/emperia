@@ -8384,6 +8384,32 @@ color: var(--tj-color-theme-bg-dark-deep);
   .ab{
     margin-top: -30px  !important;
   }
+
+  /* Small screens (mobile devices) */
+@media (max-width: 576px) {
+    .ab {
+      margin-top: -5px !important;
+    }
+  }
+  
+  /* Medium screens (tablets) */
+  @media (min-width: 577px) and (max-width: 768px) {
+    .ab {
+      margin-top: -10px !important;
+    }
+  }
+  
+  /* Large screens (desktops and larger devices) */
+  @media (min-width: 769px) {
+    .ab {
+      margin-top: -15px !important;
+    }
+  }
+  
   .textp{
     text-align: justify;
+  }
+
+  .error{
+    color: red;
   }

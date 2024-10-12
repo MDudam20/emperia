@@ -5,14 +5,13 @@
 
 
 ****************************************************/
-
-(function($) {
+(function ($) {
     "use strict";
 
     var windowOn = $(window);
     ////////////////////////////////////////////////////
     // 01. PreLoader Js
-    windowOn.on("load", function() {
+    windowOn.on("load", function () {
         $(".preloader").fadeOut(500);
     });
 
@@ -23,7 +22,7 @@
         if (w.matches) {
             $(".header").after('<div class="sticky-header-wrap"></div>');
             $(".sticky-header-wrap").html(headerClone);
-            $(window).on("scroll", function() {
+            $(window).on("scroll", function () {
                 var headerSelector = $(".sticky-header-wrap");
                 var scroll = $(window).scrollTop();
                 if (scroll >= 110) {
@@ -38,7 +37,7 @@
     if ($(".header").hasClass("sticky-active")) {
         menuSticky(minWidth);
     } else {
-        windowOn.on("scroll", function() {
+        windowOn.on("scroll", function () {
             var scroll = $(window).scrollTop();
             if (scroll < 100) {
                 $(".header").removeClass("header__sticky");
@@ -59,29 +58,29 @@
     });
 
     // Mobile Sidemenu
-    $(".mobile-side-menu-toggle").on("click", function() {
+    $(".mobile-side-menu-toggle").on("click", function () {
         $(".mobile-side-menu, .mobile-side-menu-overlay").toggleClass("is-open");
     });
 
     $(".mobile-side-menu-close, .mobile-side-menu-overlay").on(
         "click",
-        function() {
+        function () {
             $(".mobile-side-menu, .mobile-side-menu-overlay").removeClass("is-open");
         }
     );
 
     ////////////////////////////////////////////////////
     // 05. Search Js
-    $(".search-toggle").on("click", function() {
+    $(".search-toggle").on("click", function () {
         $(".search__area").addClass("opened");
     });
-    $(".search-close-btn").on("click", function() {
+    $(".search-close-btn").on("click", function () {
         $(".search__area").removeClass("opened");
     });
 
     ////////////////////////////////////////////////////
     // 06. Sticky Header Js
-    windowOn.on("scroll", function() {
+    windowOn.on("scroll", function () {
         var scroll = $(window).scrollTop();
         if (scroll < 100) {
             $("#main-header").removeClass("header__sticky");
@@ -92,18 +91,18 @@
 
     ////////////////////////////////////////////////////
     // 07. Data CSS Js
-    $("[data-background").each(function() {
+    $("[data-background").each(function () {
         $(this).css(
             "background-image",
             "url( " + $(this).attr("data-background") + "  )"
         );
     });
 
-    $("[data-width]").each(function() {
+    $("[data-width]").each(function () {
         $(this).css("width", $(this).attr("data-width"));
     });
 
-    $("[data-bg-color]").each(function() {
+    $("[data-bg-color]").each(function () {
         $(this).css("background-color", $(this).attr("data-bg-color"));
     });
 
@@ -126,24 +125,24 @@
     ////////////////////////////////////////////////////
     // 08. Odometer
     $(".odometer").waypoint(
-        function() {
+        function () {
             var odo = $(".odometer");
-            odo.each(function() {
+            odo.each(function () {
                 var countNumber = $(this).attr("data-count");
                 $(this).html(countNumber);
             });
         }, {
-            offset: "80%",
-            triggerOnce: true,
-        }
+        offset: "80%",
+        triggerOnce: true,
+    }
     );
 
     // Side menu
-    $(".side-menu-icon").on("click", function() {
+    $(".side-menu-icon").on("click", function () {
         $(".side-menu-wrapper, .side-menu-overlay").toggleClass("is-open");
     });
 
-    $(".side-menu-close, .side-menu-overlay").on("click", function() {
+    $(".side-menu-close, .side-menu-overlay").on("click", function () {
         $(".side-menu-wrapper, .side-menu-overlay").removeClass("is-open");
     });
 
@@ -180,7 +179,7 @@
         var filterItem = $(".gallery-filter .item").data("owl-filter");
         owlGallery.owlcarousel2_filter(filterItem);
 
-        $(".gallery-filter").on("click", ".item", function() {
+        $(".gallery-filter").on("click", ".item", function () {
             $(this).siblings(".active").removeClass("active");
             $(this).addClass("active");
             var $item = $(this);
@@ -287,11 +286,11 @@
 
     ////////////////////////////////////////////////////
     // 13. Masonary Js
-    $(".grid").imagesLoaded(function() {
+    $(".grid").imagesLoaded(function () {
         /* ======= ISOTOP Active ======= */
-        $(".project-filter-items").imagesLoaded(function() {
+        $(".project-filter-items").imagesLoaded(function () {
             // Add isotope click function
-            $(".project-filter li").on("click", function() {
+            $(".project-filter li").on("click", function () {
                 $(".project-filter li").removeClass("active");
                 $(this).addClass("active");
                 var selector = $(this).attr("data-filter");
@@ -313,7 +312,7 @@
         });
 
         // filter items on button click
-        $(".masonary-menu").on("click", "button", function() {
+        $(".masonary-menu").on("click", "button", function () {
             var filterValue = $(this).attr("data-filter");
             $grid.isotope({
                 filter: filterValue
@@ -321,7 +320,7 @@
         });
 
         //for menu active class
-        $(".masonary-menu button").on("click", function(event) {
+        $(".masonary-menu button").on("click", function (event) {
             $(this).siblings(".active").removeClass("active");
             $(this).addClass("active");
             event.preventDefault();
@@ -343,7 +342,7 @@
 
     ////////////////////////////////////////////////////
     // 14. Wow Js
-    $(window).on("load", function() {
+    $(window).on("load", function () {
         var wow = new WOW({
             boxClass: "wow", // default
             animateClass: "animated", // default
@@ -356,7 +355,7 @@
 
     ////////////////////////////////////////////////////
     // 16. Cart Quantity Js
-    $(".cart-minus").click(function() {
+    $(".cart-minus").click(function () {
         var $input = $(this).parent().find("input");
         var count = parseInt($input.val()) - 1;
         count = count < 1 ? 1 : count;
@@ -364,7 +363,7 @@
         $input.change();
         return false;
     });
-    $(".cart-plus").click(function() {
+    $(".cart-plus").click(function () {
         var $input = $(this).parent().find("input");
         $input.val(parseInt($input.val()) + 1);
         $input.change();
@@ -373,25 +372,25 @@
 
     ////////////////////////////////////////////////////
     // 17. Show Login Toggle Js
-    $("#showlogin").on("click", function() {
+    $("#showlogin").on("click", function () {
         $("#checkout-login").slideToggle(900);
     });
 
     ////////////////////////////////////////////////////
     // 18. Show Coupon Toggle Js
-    $("#showcoupon").on("click", function() {
+    $("#showcoupon").on("click", function () {
         $("#checkout_coupon").slideToggle(900);
     });
 
     ////////////////////////////////////////////////////
     // 19. Create An Account Toggle Js
-    $("#cbox").on("click", function() {
+    $("#cbox").on("click", function () {
         $("#cbox_info").slideToggle(900);
     });
 
     ////////////////////////////////////////////////////
     // 20. Shipping Box Toggle Js
-    $("#ship-box").on("click", function() {
+    $("#ship-box").on("click", function () {
         $("#ship-box-info").slideToggle(1000);
     });
 
@@ -406,7 +405,7 @@
 
     ////////////////////////////////////////////////////
     // 23. InHover Active Js
-    $(".hover__active").on("mouseenter", function() {
+    $(".hover__active").on("mouseenter", function () {
         $(this)
             .addClass("active")
             .parent()
@@ -417,12 +416,12 @@
 
     ////////////////////////////////////////////////////
     // 01. PreLoader Js
-    windowOn.on("load", function() {
+    windowOn.on("load", function () {
         $("#loading").fadeOut(500);
     });
     if ($("#loading").length > 0) {
-        $(".closeLoader").each(function() {
-            $(this).on("click", function(e) {
+        $(".closeLoader").each(function () {
+            $(this).on("click", function (e) {
                 e.preventDefault();
                 $("#loading").fadeOut(500);
             });
@@ -444,7 +443,7 @@
         scrollProgressPatch.style.transition =
             scrollProgressPatch.style.WebkitTransition =
             "stroke-dashoffset 10ms linear";
-        window.addEventListener("scroll", function(event) {
+        window.addEventListener("scroll", function (event) {
             var scroll =
                 document.body.scrollTop || document.documentElement.scrollTop;
             var height =
@@ -460,7 +459,7 @@
                 beaulyScrollTop.classList.remove("progress-done");
             }
         });
-        beaulyScrollTop.addEventListener("click", function(e) {
+        beaulyScrollTop.addEventListener("click", function (e) {
             e.preventDefault();
             window.scroll({
                 top: 0,
@@ -489,4 +488,135 @@
     //             void 0
     //         );
     //     });
+    // $(document).ready(function () {
+        $("#request_qoute_form").validate({
+            rules: {
+                name: { required: true },
+                email: { required: true, email: true },
+                phone: { required: true, minlength: 10, maxlength: 10, digits: true },
+                ride_time: { required: true },
+                message: { required: true }
+            },
+            messages: {
+                name: { required: "Please enter your Full Name" },
+                email: {
+                    required: "Please enter your email address",
+                    email: "Please enter a valid email address",
+                },
+                phone: {
+                    required: "Please enter your phone number",
+                    minlength: "Phone number must be exactly 10 digits",
+                    maxlength: "Phone number must be exactly 10 digits",
+                    digits: "Please enter a valid phone number with only digits",
+                },
+                ride_time: { required: "Please enter your Time" },
+                message: { required: "Please enter your Message" },
+            },
+            submitHandler: function (form, event) {
+                // Prevent the form's default submit action (page reload)
+                event.preventDefault();
+
+                // Show SweetAlert loader before the AJAX call starts
+                Swal.fire({
+                    title: 'Submitting your request...',
+                    text: 'Please wait a moment',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading(); // Show Swal loader
+                    },
+                });
+
+                // Create FormData object
+                var formData = new FormData($(form)[0]);
+                $.ajax({
+                    type: "POST",
+                    url: "/email-temp/mail_send.php",
+                    data: formData,
+                    contentType: false, // Don't set contentType
+                    processData: false, // Don't process data
+                    success: function (message) {
+                        // Close the loader when the request completes
+                        Swal.close();
+
+                        console.log(message);
+                        if (message === "Mail has been sent successfully!") {
+                            Swal.fire("Successful!", "Your message has been sent!", "success");
+                            $(form).trigger("reset");
+                        } else {
+                            Swal.fire("Error", "There was an issue sending your message.", "error");
+                        }
+                    },
+                    error: function (t) {
+                        // Close the loader if an error occurs
+                        Swal.close();
+                        Swal.fire("Error", "Error submitting form: " + t.statusText, "error");
+                    },
+                });
+            },
+        });
+        $("#popupForm").validate({
+            rules: {
+                email: { required: true, email: true },
+                name: { required: true },
+                phone: { required: true, minlength: 10, maxlength: 10, digits: true },
+            },
+            messages: {
+                email: {
+                    required: "Please enter your email address",
+                    email: "Please enter a valid email address",
+                },
+                name: { required: "Please enter your Full Name" },
+                phone: {
+                    required: "Please enter your phone number",
+                    minlength: "Phone number must be exactly 10 digits",
+                    maxlength: "Phone number must be exactly 10 digits",
+                    digits: "Please enter a valid phone number with only digits",
+                }
+            },
+            submitHandler: function (form, event) {
+                // Prevent the form's default submit action (page reload)
+                event.preventDefault();
+
+                $("#enquiryModal").modal("hide");
+                // Show SweetAlert loader before the AJAX call starts
+                Swal.fire({
+                    title: 'Submitting your request...',
+                    text: 'Please wait a moment',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading(); // Show Swal loader
+                    },
+                });
+
+                // Create FormData object
+                var formData = new FormData($(form)[0]);
+                $.ajax({
+                    type: "POST",
+                    url: "/email-temp/mail_popupForm_send.php",
+                    data: formData,
+                    contentType: false, // Don't set contentType
+                    processData: false, // Don't process data
+                    success: function (message) {
+                        // Close the loader when the request completes
+                        Swal.close();
+
+                        console.log(message);
+                        if (message === "Mail has been sent successfully!") {
+                            Swal.fire("Successful!", "Your message has been sent!", "success");
+                            $(form).trigger("reset");
+                        } else {
+                            Swal.fire("Error", "There was an issue sending your message.", "error");
+                        }
+
+                        
+                    },
+                    error: function (t) {
+                        // Close the loader if an error occurs
+                        Swal.close();
+                        Swal.fire("Error", "Error submitting form: " + t.statusText, "error");
+                    },
+                });
+            },
+        });
+    // });
 })(jQuery);
