@@ -560,7 +560,7 @@ img {
 }
 
 .tj-primary-btn {
-    /* background: var(--tj-color-theme-primary); */
+    
     background: #E3B574;
     color: var(--tj-color-common-white);
     font-family: var(--tj-ff-primary);
@@ -577,6 +577,31 @@ img {
     z-index: 1;
     border-radius: 15px;
 }
+
+@media (max-width:2000px){
+.rocky{
+  margin-left: 170px;
+}
+}
+
+@media (max-width:1440px){
+    .rocky{
+      margin-left: 28px;
+    }
+    }
+
+    @media (max-width:1024px){
+        .rocky{
+          margin-left: 0px;
+        }
+        }
+        
+        @media (max-width:768px){
+            .rocky{
+              margin-left: -14px;
+            }
+            }
+            
 
 .tj-primary-btn:focus,
 .tj-primary-btn:hover,
