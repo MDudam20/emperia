@@ -8494,3 +8494,7 @@ color: var(--tj-color-theme-bg-dark-deep);
         margin-left: 10px;
     }
 }
+.shift_button{
+    margin-left: 155px;
+}
+@media(min-width:1400px)
