@@ -8533,3 +8533,35 @@ color: var(--tj-color-theme-bg-dark-deep);
         margin-left: 0vw;
     }
 }
+
+.shift_button{
+    margin-left: 155px;
+}
+
+
+.privacy-policy {
+padding-top: 100px;
+color: #78081c;
+}
+.policy3{
+    color: #78081c;
+}
+.policy4{
+
+    padding-bottom: 50px;
+    text-align: justify;
+    
+
+}
+.policy6{
+    background-color: #d2a767;
+}
+.policy5{
+    text-align: justify;
+}
+
+.disclaimer{
+    padding-top: 120px;
+    color: #78081c;
+
+}
