@@ -213,7 +213,7 @@
 
     // Project Carousel
     $(".project-carousel").owlCarousel({
-        center: true,
+        // center: true,
         items: 2,
         loop: true,
         nav: true,
