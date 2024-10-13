@@ -341,7 +341,7 @@ img {
 }
 
 .padding {
-    padding: 120px 0;
+    padding: 90px 0;
 }
 
 @media (max-width: 991px) {
@@ -2847,7 +2847,7 @@ START: Theme About CSS
 }
 
 .about-content p {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     max-width: 600px;
     width: 100%;
     color: var(--tj-color-grey-1);
@@ -8406,10 +8406,91 @@ color: var(--tj-color-theme-bg-dark-deep);
     }
   }
   
-  .textp{
+  .textm{
     text-align: justify;
   }
 
   .error{
     color: red;
   }
+
+
+
+
+/* .textp{
+    padding-bottom: 19px;
+} */
+.textp {
+    text-indent: 30px; 
+    text-align: justify;
+   
+}
+
+.yy{
+    margin-left: 58px;
+}
+@media (min-width: 1200px) and  (max-width: 1900px){
+    .kk{
+        margin-left: 100px;
+    }
+}
+@media (min-width: 1000px) and  (max-width: 1200px){
+    .kk{
+        margin-left: 84px;
+    }
+}
+@media (min-width: 1200px) and  (max-width: 1900px){
+    .yy{
+        margin-left: 58px;
+    }
+}
+@media (min-width: 1000px) and  (max-width: 1200px){
+    .yy{
+        margin-left: 38px;
+    }
+}
+@media (min-width: 650px) and  (max-width: 1000px){
+    .kk{
+        margin-left: 75px;
+    }
+    .yy{
+        margin-left: 75px; 
+    }
+    .oo{
+      margin-left:   57px
+    }
+    .tt{
+        margin-left: 100px;
+    }
+}
+
+@media (min-width: 375px) and  (max-width: 650px){
+    .counter-item.item-2 .counter-title{
+        font-size: 26px;
+    }  
+    .kk{
+        margin-left: 48px;
+    }  
+    .yy{
+        margin-left: 44px;
+    } 
+  
+    .oo{
+        margin-left: 44px;
+    }
+    .tt{
+        margin-left: 48px;
+    }
+    .a{
+        font-size: 14px;
+    }
+
+}
+@media (min-width: 200px) and  (max-width: 375px){
+    .counter-item.item-2 .counter-title{
+        font-size: 18px;
+    }  
+    .yy{
+        margin-left: 10px;
+    }
+}

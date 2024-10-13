@@ -3009,11 +3009,13 @@
 }
 
 .fa-chevron-left:before {
-    content: "\f053"
+    content: "\f053";
+    color: white;
 }
 
 .fa-chevron-right:before {
-    content: "\f054"
+    content: "\f054";
+    color: white;
 }
 
 .fa-chevron-up:before {
