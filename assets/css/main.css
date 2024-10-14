@@ -8584,3 +8584,14 @@ font-size: 55px;
         font-size: 30px;
     }
 }
+
+@media (min-width:300px) and (max-width:375px){
+    .privacy-policy {
+        font-size: 30px;
+    }
+}
+@media (min-width:300px) and (max-width:375px){
+    .disclaimer {
+        font-size: 30px;
+    }
+}
