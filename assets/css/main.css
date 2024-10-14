@@ -2278,12 +2278,18 @@ START: Theme Hero CSS
     margin-bottom: 0;
 }
 
-@media (max-width: 767px) {
+@media (min-width:400px)and (max-width: 767px) {
     .hero-section .hero-text p {
-        font-size: 15px;
+        font-size: 21px;
     }
 }
 
+
+@media (min-width:320px)and (max-width: 400px) {
+    .hero-section .hero-text p {
+        font-size: 11px;
+    }
+}
 .hero-section .text-2 {
     left: auto;
     right: 50px;
@@ -8405,7 +8411,18 @@ color: var(--tj-color-theme-bg-dark-deep);
   
   .phone_no_blink {
     animation: blink 1s infinite;
+
   }
+
+  /* @media (min-width:400px) and (max-width:768px){
+    .phone_no_blink {
+       font-size: 50px;
+        
+      }
+  } */
+
+
+
   .ab{
     margin-top: -30px  !important;
   }
@@ -8529,9 +8546,18 @@ color: var(--tj-color-theme-bg-dark-deep);
 .privacy-policy {
 padding-top: 100px;
 color: #78081c;
+font-size: 55px;
+}
+
+
+@media (min-width:375px) and (max-width:765px){
+    .privacy-policy {
+        font-size: 30px;
+    }
 }
 .policy3{
     color: #78081c;
+    font-size: 30px;
 }
 .policy4{
 
@@ -8550,5 +8576,11 @@ color: #78081c;
 .disclaimer{
     padding-top: 120px;
     color: #78081c;
+    font-size: 55px;
 
+}
+@media (min-width:375px) and (max-width:765px){
+    .disclaimer {
+        font-size: 30px;
+    }
 }
