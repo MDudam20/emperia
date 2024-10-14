@@ -30,6 +30,7 @@ if (isset($_POST['email']) && isset($_POST['name']) && isset($_POST['ride_time']
         //Recipients
         $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
         $mail->addAddress($_ENV['MAIL_FROM_ADDRESS']); // Add a recipient email address
+        $mail->addAddress("sales@emperia.co.in");
 
         // Content
         $mail->isHTML(true);
