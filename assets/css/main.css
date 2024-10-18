@@ -8617,3 +8617,26 @@ font-size: 55px;
         font-size: 25px;
     }
 }
+/* Center the dots horizontally */
+.owl-dots {
+    display: flex;
+    justify-content: center;   /* Center the dots */
+    margin-top: 20px;          /* Add some space above the dots */
+}
+
+/* Customize the look of the round dots */
+.owl-dots .owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: white;   /* White color for the dots */
+    border-radius: 50%;        /* Make the dots round */
+    opacity: 0.5;              /* Slightly transparent dots */
+    transition: opacity 0.3s;  /* Smooth transition effect */
+}
+
+.owl-dots .owl-dot.active {
+    background-color: white;   /* White color for the active dot */
+    opacity: 1;                /* Fully opaque for the active dot */
+}

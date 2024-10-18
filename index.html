@@ -733,72 +733,84 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading text-center mb-60">
-                        <h2 class="section-title wow fadeInUp" data-wow-delay=".3s"> Emperia C2 Floor Plan</h2>
-                        <!-- <p class=" wow fadeInUp" data-wow-delay=".5s">
-                            Trage agile frameworks to provide a robust synopsis for high level overviews Iterative approaches to corporate strategy foster collabo
-                        </p> -->
+                        <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">Emperia C2 Floor Plan</h2>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="floor-item text-center wow fadeInUp" data-wow-delay=".3s">
+                <!-- Owl Carousel container -->
+                <div class="owl-carousel owl-theme">
+                    <!-- Basement Floor -->
+                    <!-- <div class="floor-item text-center">
                         <div class="floor-thumb">
                             <a href="assets/img/floor/basement floor.png" data-lightbox="floor-plan">
-                                <img src="assets/img/floor/basement floor.png" alt="Floor Plan 1">
-                            </a>
-                            <!-- <a href="#"><img src="assets/img/images/f1.jpeg" alt="floor" /></a> -->
-                        </div>
-                        <div class="floor-content">
-                            <h3 class="floor-title"><a href="#"> Basement Floor Plan</a></h3>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="floor-item text-center  wow fadeInUp" data-wow-delay=".5s">
-                        <div class="floor-thumb">
-                            <a href="assets/img/floor/ground floor plan.png" data-lightbox="floor-plan">
-                                <img src="assets/img/floor/ground floor plan.png" alt="Floor Plan 1">
-                            </a>
-                            <!-- <a href="#"><img src="assets/img/images/f2.jpeg" alt="floor" /></a> -->
-                        </div>
-                        <div class="floor-content">
-                            <h3 class="floor-title"><a href="#"> Ground Floor Plan</a></h3>
-
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="floor-item text-center wow fadeInUp" data-wow-delay=".7s">
-                        <div class="floor-thumb">
-                            <a href="assets/img/floor/first floor.png" data-lightbox="floor-plan">
-                                <img src="assets/img/floor/first floor.png" alt="Floor Plan 1">
+                                <img src="assets/img/floor/basement floor.png" alt="Basement Floor Plan" class="d-block w-100">
                             </a>
                         </div>
                         <div class="floor-content">
-                            <h3 class="floor-title"><a href="#"> First Floor Plan</a></h3>
-
+                            <h3 class="floor-title"><a href="#">Basement Floor Plan</a></h3>
+                        </div>
+                    </div> -->
+                    <!-- Ground Floor -->
+                    <div class="floor-item text-center">
+                        <div class="floor-thumb">
+                            <a href="assets/img/floor/Ground floor.png" data-lightbox="floor-plan">
+                                <img src="assets/img/floor/Ground floor.png" alt="Ground Floor Plan" class="d-block w-100">
+                            </a>
+                        </div>
+                        <div class="floor-content">
+                            <h3 class="floor-title"><a href="#">Ground Floor Plan</a></h3>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="floor-item text-center wow fadeInUp" data-wow-delay=".7s">
+                    <!-- First Floor -->
+                    <div class="floor-item text-center">
                         <div class="floor-thumb">
-                            <a href="assets/img/floor/2and3 floor.png" data-lightbox="floor-plan">
-                                <img src="assets/img/floor/2and3 floor.png" alt="Floor Plan 1">
+                            <a href="assets/img/floor/1ST-FLOOR-PLAN.png" data-lightbox="floor-plan">
+                                <img src="assets/img/floor/1ST-FLOOR-PLAN.png" alt="First Floor Plan" class="d-block w-100">
+                            </a>
+                        </div>
+                        <div class="floor-content">
+                            <h3 class="floor-title"><a href="#">First Floor Plan</a></h3>
+                        </div>
+                    </div>
+                    <!-- Second Floor -->
+                    <div class="floor-item text-center">
+                        <div class="floor-thumb">
+                            <a href="assets/img/floor/2ND-FLOOR-PLAN.png" data-lightbox="floor-plan">
+                                <img src="assets/img/floor/2ND-FLOOR-PLAN.png" alt="Second Floor Plan" class="d-block w-100">
                             </a>
                         </div>
                         <div class="floor-content">
                             <h3 class="floor-title"><a href="#">Second Floor Plan</a></h3>
-
+                        </div>
+                    </div>
+                    <!-- third floor plan -->
+                    <div class="floor-item text-center">
+                        <div class="floor-thumb">
+                            <a href="assets/img/floor/3RD-FLOOR-PLAN.png" data-lightbox="floor-plan">
+                                <img src="assets/img/floor/3RD-FLOOR-PLAN.png" alt="Second Floor Plan" class="d-block w-100">
+                            </a>
+                        </div>
+                        <div class="floor-content">
+                            <h3 class="floor-title"><a href="#">Third Floor Plan</a></h3>
+                        </div>
+                    </div>
+                    <!-- p3 level  plan -->
+                    <div class="floor-item text-center">
+                        <div class="floor-thumb">
+                            <a href="assets/img/floor/P3-LEVEL-PLAN.png" data-lightbox="floor-plan">
+                                <img src="assets/img/floor/P3-LEVEL-PLAN.png" alt="Second Floor Plan" class="d-block w-100">
+                            </a>
+                        </div>
+                        <div class="floor-content">
+                            <h3 class="floor-title"><a href="#">P3 Level Plan</a></h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- ./ floor plan section -->
 
@@ -1520,6 +1532,31 @@
 
 
     </script> -->
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop: true,           // Infinite loop
+                margin: 10,           // Spacing between items
+                nav: false,           // Disable navigation buttons
+                dots: true,           // Show dot indicators
+                autoplay: true,       // Enable auto play
+                autoplayTimeout: 3000,// Speed of autoplay (3 seconds)
+                responsive: {
+                    0: {
+                        items: 1      // 1 item for mobile devices
+                    },
+                    600: {
+                        items: 2      // 2 items for tablets
+                    },
+                    1000: {
+                        items: 3      // 3 items for desktops
+                    }
+                }
+            });
+        });
+    </script>
+    
+        
 
 </body>
 
