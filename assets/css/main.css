@@ -6506,13 +6506,13 @@ START: Theme Floor CSS
 
 .floor-item .floor-thumb {
     height: 250px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .floor-item .floor-thumb img {
     height: 100%;
     width: auto;
-    border: 15px solid rgba(247, 181, 181, 0.1);
+    /* border: 15px solid rgba(247, 181, 181, 0.1); */
     box-shadow: 0 4px 8px rgba(255, 158, 158, 0.1);
 }
 
